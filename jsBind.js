@@ -22,8 +22,8 @@ const obj = {
     },
 };
 const jj = {
-    name: '这是jj',
-    alertName() { // 绑定失效
+    name: 'This is jj',
+    alertName() { // bind failed.
         console.log(this.name);
     },
 };
@@ -34,7 +34,7 @@ function run(f) {
     f();
 }
 // run(jj.alertName);
-const fx2 = dom.bind(jj.alertName, kk, jj)
+const fx2 = dom.bind(jj.alertName, kk, jj);
 run(fx2);
 const fx3 = dom.bind(obj.fx, obj, 1, 2, 3);
 // line 2's ... stand for [1, 2, 3]
